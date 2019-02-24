@@ -26,7 +26,7 @@ public class Plane implements Vehicle {
     }
     
     public void take_off(){
-        System.out.println("Driving");
+        System.out.println("Take Off");
     }
 
     public void landing(){
