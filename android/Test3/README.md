@@ -1,4 +1,4 @@
-## Explianation
+## Explaination
 
 There so many design pattern to be applied to create media player. I choose each design pattern from creational pattern, structural pattern and behavior pattern.
 So, I create 3 solutions for this question.
