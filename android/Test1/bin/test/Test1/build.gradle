@@ -1,0 +1,36 @@
+apply plugin: 'java'
+
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+}
+
+sourceSets {
+    main {
+         java {
+            srcDirs = ['.']
+         }
+    }
+
+    test {
+        java {
+            srcDirs = ['.']
+        }
+    }
+}
+
+task(runSimple, dependsOn: 'classes', type: JavaExec) {
+    if(project.hasProperty('arg')){
+        args(arg.split(','))
+    }
+    main = 'Test1'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+defaultTasks 'runSimple'
